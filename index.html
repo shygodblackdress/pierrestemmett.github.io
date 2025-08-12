@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pierre Stemmett | Music</title>
+  <meta name="description" content="Official landing page for Pierre Stemmett – listen, follow, and get in touch." />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pierre Stemmett | Music" />
+  <meta property="og:description" content="Official landing page – listen, follow, and get in touch." />
+  <meta property="og:url" content="https://pierrestemmett.com" />
+  <meta property="og:image" content="/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b0b0b; /* off-black */
+      --fg:#eaeaea; /* near-white text */
+      --muted:#a5a5a5; /* muted text */
+      --card:#121212; /* card surface */
+      --border:#262626; /* borders */
+      --accent:#ffffff; /* links & focus (white for minimalist feel) */
+      --shadow:0 8px 30px rgba(0,0,0,.35);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+      color:var(--fg);
+      background:radial-gradient(1200px 800px at 50% -10%, #171717 20%, var(--bg) 60%);
+      display:grid; place-items:center;
+    }
+    main{
+      width:min(720px, 92vw);
+      padding:clamp(20px, 3vw, 36px);
+      text-align:center;
+    }
+    header h1{
+      font:600 clamp(28px, 3.4vw, 44px)/1.2 "Playfair Display", Georgia, serif;
+      margin:14px 0 6px;
+      letter-spacing:0.2px;
+    }
+    header p.tagline{color:var(--muted); margin:0 0 14px}
+
+    /* Avatar */
+    .avatar-wrap{display:grid; place-items:center; margin:14px auto 20px}
+    .avatar{
+      width:clamp(160px, 26vw, 240px);
+      aspect-ratio:1/1; object-fit:cover; object-position:center;
+      border-radius:50%;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      filter:saturate(1.02) contrast(1.02);
+      transition:transform .4s ease;
+      will-change:transform;
+    }
+    .avatar:hover{transform:scale(1.01)}
+
+    /* Links list */
+    .links{list-style:none; padding:0; margin:30px auto 10px; display:grid; gap:14px}
+    .btn{
+      display:flex; align-items:center; justify-content:center;
+      gap:10px; text-decoration:none; color:var(--fg);
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:14px 18px;
+      font-weight:600; letter-spacing:.2px;
+      transition:transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .btn:hover, .btn:focus-visible{ transform:translateY(-1px); border-color:#3a3a3a; outline:none }
+    .btn:active{ transform:translateY(0) scale(.99) }
+    .btn small{ font-weight:400; color:var(--muted) }
+
+    /* Social row */
+    .social{display:flex; justify-content:center; gap:12px; margin:22px 0 6px}
+    .icon-btn{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:12px; border:1px solid var(--border); background:var(--card)}
+    .icon-btn:hover{border-color:#3a3a3a}
+    .icon{width:22px; height:22px; fill:currentColor; display:block}
+
+    footer{color:var(--muted); font-size:.9rem; margin-top:18px}
+    a.inline{color:var(--fg)}
+
+    /* Accessibility: visible focus for keyboard users */
+    :where(a,button):focus-visible{
+      box-shadow:0 0 0 3px #ffffff20, 0 0 0 6px #ffffff10;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .avatar{transition:none}
+      .btn{transition:none}
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="avatar-wrap">
+      <!-- Replace /images/profile.jpg with your photo path. Keep a square image for best results. -->
+      <img class="avatar" src="profile.jpg" alt="Portrait of Pierre Stemmett" loading="eager" />
+    </div>
+    <h1>Pierre Stemmett</h1>
+    <p class="tagline">New album coming 26 September</p>
+  </header>
+
+  <ul class="links" role="list">
+    <!-- Replace href values with your real links -->
+    <li>
+      <a class="btn" href="https://open.spotify.com/artist/2xei4TwXqWutkMSxSCXSKS" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+        <!-- Spotify icon (Bootstrap Icons, MIT) -->
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" role="img"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/></svg>
+        Listen on Spotify
+      </a>
+    </li>
+    <li>
+      <a class="btn" href="https://music.apple.com/za/artist/pierre-stemmett/909062612" target="_blank" rel="noopener" aria-label="Listen on Apple Music">
+        <!-- Apple Music icon (Bootstrap Icons, MIT) -->
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" preserveAspectRatio="xMidYMid meet" role="img">
+          <path fill-rule="evenodd" d="m10.995 0 .573.001q.241 0 .483.007c.35.01.705.03 1.051.093.352.063.68.166.999.329a3.36 3.36 0 0 1 1.47 1.468c.162.32.265.648.328 1 .063.347.084.7.093 1.051q.007.241.007.483l.001.573v5.99l-.001.573q0 .241-.008.483c-.01.35-.03.704-.092 1.05a3.5 3.5 0 0 1-.33 1 3.36 3.36 0 0 1-1.468 1.468 3.5 3.5 0 0 1-1 .33 7 7 0 0 1-1.05.092q-.241.007-.483.008l-.573.001h-5.99l-.573-.001q-.241 0-.483-.008a7 7 0 0 1-1.052-.092 3.6 3.6 0 0 1-.998-.33 3.36 3.36 0 0 1-1.47-1.468 3.6 3.6 0 0 1-.328-1 7 7 0 0 1-.093-1.05Q.002 11.81 0 11.568V5.005l.001-.573q0-.241.007-.483c.01-.35.03-.704.093-1.05a3.6 3.6 0 0 1 .329-1A3.36 3.36 0 0 1 1.9.431 3.5 3.5 0 0 1 2.896.1 7 7 0 0 1 3.95.008Q4.19.002 4.432 0h.573zm-.107 2.518-4.756.959H6.13a.66.66 0 0 0-.296.133.5.5 0 0 0-.16.31c-.004.027-.01.08-.01.16v5.952c0 .14-.012.275-.106.39-.095.115-.21.15-.347.177l-.31.063c-.393.08-.65.133-.881.223a1.4 1.4 0 0 0-.519.333 1.25 1.25 0 0 0-.332.995c.031.297.166.582.395.792.156.142.35.25.578.296.236.047.49.031.858-.043.196-.04.38-.102.555-.205a1.4 1.4 0 0 0 .438-.405 1.5 1.5 0 0 0 .233-.55c.042-.202.052-.386.052-.588V6.347c0-.276.08-.35.302-.404.024-.005 3.954-.797 4.138-.833.257-.049.378.025.378.294v3.524c0 .14-.001.28-.096.396-.094.115-.211.15-.348.178l-.31.062c-.393.08-.649.133-.88.223a1.4 1.4 0 0 0-.52.334 1.26 1.26 0 0 0-.34.994c.03.297.174.582.404.792a1.2 1.2 0 0 0 .577.294c.237.048.49.03.858-.044.197-.04.381-.098.556-.202a1.4 1.4 0 0 0 .438-.405q.173-.252.233-.549a2.7 2.7 0 0 0 .044-.589V2.865c0-.273-.143-.443-.4-.42-.04.003-.383.064-.424.073"/>
+        </svg>
+        Apple Music
+      </a>
+    </li>
+    <li>
+      <a class="btn" href="https://www.youtube.com/@pierrestemmettmusic" target="_blank" rel="noopener" aria-label="Watch on YouTube">
+        <!-- YouTube icon (Bootstrap Icons, MIT) -->
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" role="img"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg>
+        YouTube
+      </a>
+    </li>
+    <li>
+      <a class="btn" href="https://www.instagram.com/pierrestemmett" target="_blank" rel="me noopener" aria-label="Instagram">
+        <!-- Instagram icon -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.95.24 2.63.51.71.28 1.3.65 1.88 1.23.58.58.95 1.17 1.23 1.88.27.68.46 1.46.51 2.63.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.95-.51 2.63-.28.71-.65 1.3-1.23 1.88-.58.58-1.17.95-1.88 1.23-.68.27-1.46.46-2.63.51-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.95-.24-2.63-.51a5.53 5.53 0 0 1-1.88-1.23A5.53 5.53 0 0 1 1.9 19.2c-.27-.68-.46-1.46-.51-2.63C1.33 15.3 1.31 14.92 1.31 11.72s.01-3.58.07-4.85c.05-1.17.24-1.95.51-2.63.28-.71.65-1.3 1.23-1.88.58-.58 1.17-.95 1.88-1.23.68-.27 1.46-.46 2.63-.51C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.98.05-1.52.21-1.88.34-.47.18-.8.39-1.15.74-.35.35-.56.68-.74 1.15-.13.36-.29.9-.34 1.88-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05.98.21 1.52.34 1.88.18.47.39.8.74 1.15.35.35.68.56 1.15.74.36.13.9.29 1.88.34 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.98-.05 1.52-.21 1.88-.34.47-.18.8-.39 1.15-.74.35-.35.56-.68.74-1.15.13-.36.29-.9.34-1.88.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-.98-.21-1.52-.34-1.88-.18-.47-.39-.8-.74-1.15a2.86 2.86 0 0 0-1.15-.74c-.36-.13-.9-.29-1.88-.34-1.24-.06-1.61-.07-4.76-.07Zm0 3.49a6.31 6.31 0 1 1 0 12.62 6.31 6.31 0 0 1 0-12.62Zm0 1.8a4.51 4.51 0 1 0 0 9.02 4.51 4.51 0 0 0 0-9.02Zm5.13-2.18a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88Z"/></svg>
+        Instagram
+      </a>
+    </li>
+    <li>
+      <a class="btn" href="mailto:pierrestemmett@gmail.com" aria-label="Email Pierre">
+        <!-- Mail icon -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.75 5.25h16.5A1.75 1.75 0 0 1 22 7v10a1.75 1.75 0 0 1-1.75 1.75H3.75A1.75 1.75 0 0 1 2 17V7A1.75 1.75 0 0 1 3.75 5.25Zm8.12 7.47L4.9 7.98a.75.75 0 0 0-.9 1.21l7.38 5.46c.38.28.92.28 1.3 0l7.38-5.46a.75.75 0 1 0-.9-1.21l-6.97 4.74-.22.16-.22-.16Z"/></svg>
+        Email
+      </a>
+    </li>
+    <!-- Optional: add your EPK or Press Kit link
+    <li>
+      <a class="btn" href="/epk" aria-label="Press Kit">Press Kit (EPK) <small>bio • press photos • stage plot</small></a>
+    </li> -->
+  </ul>
+
+
+  <footer>
+    <div>© <span id="year"></span> Pierre Stemmett • All rights reserved</div>
+  </footer>
+</main>
+
+<script>
+  // Set current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Ensure all external links open safely
+  for (const a of document.querySelectorAll('a[target="_blank"]')){
+    if(!a.rel.includes('noopener')) a.rel += ' noopener';
+  }
+</script>
+
+<!-- Structured data (optional but nice for SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pierre Stemmett",
+  "url": "https://pierrestemmett.com",
+  "jobTitle": "Musician",
+  "sameAs": [
+    "https://open.spotify.com/artist/",
+    "https://music.apple.com/artist/",
+    "https://www.youtube.com/@",
+    "https://www.instagram.com/"
+  ]
+}
+</script>
+</body>
+</html>
